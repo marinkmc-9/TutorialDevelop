@@ -47,7 +47,7 @@ public class UserController {
 
     // ----- 追加-----
     /** User更新画面を表示 */
-    @GetMapping("/update/{id}/")
+    @GetMapping("/update/{id}")
     public String getUser(@PathVariable("id") Integer id, Model model) {
         // Modelに登録
         model.addAttribute("user", service.getUser(id));
@@ -56,7 +56,7 @@ public class UserController {
     }
 
     /** User更新処理 */
-    @PostMapping("/update/{id}/")
+    @PostMapping("/update/{id}")
     public String postUser(User user) {
         // User登録
         service.saveUser(user);

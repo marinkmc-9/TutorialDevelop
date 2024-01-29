@@ -26,7 +26,7 @@
             <td th:text="${user.email}"></td>
 
             <td>
-                <a th:href="@{/user/update/{id}/(id=${user.id})}">更新</a> <!--追加 -->
+                <a th:href="@{/user/update/{id}(id=${user.id})}">更新</a> <!--追加 -->
         </tr>
     </table>
 </body>
