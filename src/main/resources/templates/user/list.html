@@ -8,6 +8,10 @@
 <body>
     <h1>User情報管理システム</h1>
     <h2>User一覧(全件)</h2>
+    <form method="post" th:action="@{/logout}"> <!--追加 -->
+        <input type="submit" value="ログアウト"> <!--追加 -->
+   </form><br> <!--追加 -->
+
     <form name="frm" method="post" th:action="@{/user/list}"> <!--追加 -->
         <a th:href="@{/user/register}">Userの登録</a>
         <input type="submit" name="deleteRun" id="deleteRun" value="(選択)したUserを一括削除"> <!--追加 -->
